@@ -102,7 +102,7 @@ const getData = async () => {
         <View style={styles.FieldContainer}>
           <TextInput placeholder="Username" style={styles.inputField} onChangeText={(e)=>setemail(e)} />
           <View>
-          <TextInput placeholder="Password"  style={styles.inputField} onChangeText={(e)=>setPassword(e)} />
+          <TextInput placeholder="Password" secureTextEntry style={styles.inputField} onChangeText={(e)=>setPassword(e)} />
           {/* <Ionicons name="ios-eye-sharp" size={32} color="#8B8B8B" style={{marginLeft:'75%',height:29,marginTop:-9}} /> */}
           </View>
         </View>

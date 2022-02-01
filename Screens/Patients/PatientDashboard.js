@@ -8,6 +8,7 @@ import {
   FlatList,
   ScrollView,
   TouchableOpacity,
+  
 } from 'react-native';
 import firestore from '@react-native-firebase/firestore';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -100,6 +101,14 @@ const PatientDashboard = ({navigation}) => {
       </View>
       <ScrollView>
         <View style={styles.categoryContainer}>
+        <TouchableOpacity style={styles.joinbtn} onPress={()=>navigation.navigate("PatientVideoCall")} >
+              <Text style={{fontSize: 18, color: 'white'}}>Join</Text>
+              <Image
+                style={{height: 15, width: 20}}
+                resizeMode="contain"
+                source={require('../../assets/images/call.png')}
+              />
+            </TouchableOpacity>
           <Text style={styles.categoryText}>Categories</Text>
           <Text style={styles.categoryText}>See All</Text>
         </View>
@@ -230,5 +239,14 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 10,
     margin: 5,
+  },
+  joinbtn: {
+    height: 45,
+    width: 90,
+    backgroundColor: '#32b7ba',
+    borderRadius: 5,
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    flexDirection: 'row',
   },
 });

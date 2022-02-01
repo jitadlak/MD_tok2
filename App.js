@@ -24,7 +24,9 @@ import AllDoctors from './Screens/Patients/AllDoctors'
 
 import { Provider } from 'react-redux'
 import { store } from './Redux/store'
-
+import VideoCall from './Screens/VideoCall'
+import PatientVideoCall from './Screens/Patients/PatientVideoCall'
+import VideoComponent from './Screens/VideoComponent'
 const Stack = createNativeStackNavigator();
 
 const App = () => {
@@ -45,6 +47,8 @@ const App = () => {
         <Stack.Screen name="BookAppointment" component={BookAppointment} />
         <Stack.Screen name="AboutDoctor" component={AboutDoctor} />
         <Stack.Screen name="PatientSignIn" component={PatientSignIn} />
+        <Stack.Screen name="VideoCall" component={VideoComponent} />
+        <Stack.Screen name="PatientVideoCall" component={PatientVideoCall} />
       </Stack.Navigator>
  </NavigationContainer>
  </Provider>

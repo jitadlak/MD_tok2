@@ -71,7 +71,7 @@ console.log(botttomdata)
         <TouchableOpacity style={styles.btmbtn} onPress={()=>navigation.navigate("ChatScreen")}>
           <Text style={styles.btmbtntext}>Send Messages</Text>
         </TouchableOpacity>
-        <TouchableOpacity  style={styles.btmbtn1}>
+        <TouchableOpacity  style={styles.btmbtn1} onPress={()=>navigation.navigate("VideoCall")}>
           <Text  style={styles.btmbtntext}>Call</Text>
         </TouchableOpacity>
        
